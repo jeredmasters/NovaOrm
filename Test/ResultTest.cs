@@ -13,11 +13,11 @@ namespace Test
     [TestClass]
     public class ResultTest
     {
-        NovaDb _db;
+        INovaDb _db;
 
         string _testTable = "TestTable3";
 
-        NovaTable _sut;
+        INovaTable _sut;
 
         [TestInitialize]
         public void Init()

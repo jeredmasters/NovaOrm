@@ -9,11 +9,11 @@ namespace Test
     [TestClass]
     public class EntityTest
     {
-        NovaDb _sut;
+        INovaDb _sut;
 
         string _testTable = "TestTable2";
 
-        NovaTable _table;
+        INovaTable _table;
 
         [TestInitialize]
         public void Init()

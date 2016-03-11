@@ -16,7 +16,7 @@ namespace NovaOrm
         INovaQuery Select(INovaQuery table);
         INovaQuery Select(string table);
         INovaQuery Update(string table);
-        NovaTable Table(string table, string identity = null);
+        INovaTable Table(string table, string identity = null);
         bool TableExists(string tableName);
         NovaOrm.NovaDb.ExceptionThrown ExceptionHandler { get; set; }
     }

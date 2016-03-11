@@ -81,7 +81,7 @@ namespace NovaOrm
             return _query;
         }
 
-        public NovaTable Table(string table, string identity)
+        public INovaTable Table(string table, string identity)
         {
             throw new NotImplementedException();
         }

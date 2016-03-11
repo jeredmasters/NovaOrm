@@ -113,12 +113,12 @@ namespace NovaOrm
             return Table(tableName).Delete();
         }
 
-        public NovaTable Table(string table, string identity = null)
+        public INovaTable Table(string table, string identity = null)
         {
             return new NovaTable(this, table, identity);
         }
 
-        public NovaTable Table(INovaQuery table, string identity = null)
+        public INovaTable Table(INovaQuery table, string identity = null)
         {
             return new NovaTable(this, table, identity);
         }
