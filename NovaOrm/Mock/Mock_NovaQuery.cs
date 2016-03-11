@@ -44,9 +44,9 @@ namespace NovaOrm
             return (Dictionary<string, object>)_returnVal;
         }
 
-        public INovaReader Table()
+        public INovaResult Result()
         {
-            return (INovaReader)_returnVal;
+            return (INovaResult)_returnVal;
         }
 
         public object Scalar()

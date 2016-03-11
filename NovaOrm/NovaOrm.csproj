@@ -53,10 +53,9 @@
     <Compile Include="NovaField.cs" />
     <Compile Include="NovaJoin.cs" />
     <Compile Include="NovaOrder.cs" />
-    <Compile Include="NovaResult.cs" />
     <Compile Include="NovaQuery.cs" />
     <Compile Include="NovaSmoothing.cs" />
-    <Compile Include="NovaReader.cs" />
+    <Compile Include="NovaResult.cs" />
     <Compile Include="NovaTable.cs" />
     <Compile Include="NovaWhere.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

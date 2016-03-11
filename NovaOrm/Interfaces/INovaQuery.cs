@@ -13,7 +13,7 @@ namespace NovaOrm
         INovaQuery Distinct(string column);
         int Execute(bool handleException = true);
         NovaEntity First();
-        INovaReader Table();
+        INovaResult Result();
         INovaQuery Join(string table, string main, string sub = null);
         INovaQuery Limit(int value);
         INovaQuery Order(string column, string direction = "ASC");

@@ -554,7 +554,7 @@ namespace NovaOrm
             return _db.Query(BuildString());
         }
 
-        public virtual INovaReader Table()
+        public virtual INovaResult Result()
         {
             using (var reader = Get())
             {
@@ -569,7 +569,7 @@ namespace NovaOrm
                     cols.Add(_smoothing.Name);
                 }
 
-                INovaReader table = new NovaReader(cols.ToArray(), _smoothing);
+                INovaResult table = new NovaResult(cols.ToArray(), _smoothing);
 
                 while (reader.Read())
                 {

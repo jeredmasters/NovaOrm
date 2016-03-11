@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NovaOrm
 {
-    public class Mock_NovaTable : INovaReader
+    public class Mock_NovaTable : INovaResult
     {
         public void AddRow(NovaEntity row)
         {

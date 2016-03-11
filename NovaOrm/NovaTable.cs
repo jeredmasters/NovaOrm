@@ -77,33 +77,6 @@ namespace NovaOrm
             return _db.TableExists(_tableName);
         }
 
-
-        public void Set(object id, object something)
-        {
-
-            INovaQuery query;
-            var obj = this.Find(id);
-
-            if (obj == null)
-            {
-                query = Insert();
-                foreach (var prop in something.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
-                {
-                    query.Column(prop.Name, prop.GetValue(something, null));
-                }
-            }
-            else
-            {
-                query = Update(id.ToString());
-                foreach (var prop in something.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
-                {
-                    query.Column(prop.Name, prop.GetValue(something, null));
-                }
-            }
-
-            query.Execute();
-        }
-
         public NovaEntity Find(object id)
         {
             return getQuery("SELECT", id).First();

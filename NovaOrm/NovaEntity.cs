@@ -124,6 +124,19 @@ namespace NovaOrm
             return null;
         }
 
+        public void Delete()
+        {
+            _table.Delete().Where(_identity, _id).Execute();
+        }
+        public string ToCsv()
+        {
+            List<string> cells = new List<string>();
+            foreach (NovaField field in this)
+            {
+                cells.Add(field.ToCsv());
+            }
+            return String.Join(",", cells);
+        }
         public string ToJson()
         {
             List<string> cells = new List<string>();

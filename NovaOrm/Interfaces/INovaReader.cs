@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace NovaOrm
 {
-    public interface INovaReader
+    public interface INovaResult
     {
         void AddRow(NovaEntity row);
         bool Read();

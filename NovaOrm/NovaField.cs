@@ -12,7 +12,7 @@ namespace NovaOrm
         public object Value { get; set; }
         public bool Edited { get; set; }
 
-        public string ToJson()
+        public override string ToString()
         {
             object val = Value;
 
@@ -34,7 +34,15 @@ namespace NovaOrm
                 val = "null";
             }
 
-            return "\"" + Name + "\" : " + val;
+            return val.ToString();
+        }
+        public string ToCsv()
+        {
+            return this.ToString();
+        }
+        public string ToJson()
+        {
+            return "\"" + Name + "\" : " + this.ToString();
         }
     }
 }
